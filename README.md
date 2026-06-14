@@ -1,8 +1,8 @@
 # MAPA-BUCHAREST
 MODELO DO MAPA DA ROMENIA EM PYTHON.
-# C:\Users\User\Documents\MAPA_ROMENIA
-# 
+
 # 1. Modelando o mapa da Romênia como um grafo (Cidades e as distâncias entre elas)
+
 mapa_romenia= {'Arad': [('Zerind', 75), ('Sibiu', 140), ('Timisoara', 118)],
     'Zerind': [('Arad', 75), ('Oradea', 71)],
     'Oradea': [('Zerind', 71), ('Sibiu', 151)],
