@@ -2,11 +2,8 @@
 MODELO DO MAPA DA ROMENIA EM PYTHON.
 # C:\Users\User\Documents\MAPA_ROMENIA
 # 
-import heapq
-
 # 1. Modelando o mapa da Romênia como um grafo (Cidades e as distâncias entre elas)
-mapa_romenia = {
-    'Arad': [('Zerind', 75), ('Sibiu', 140), ('Timisoara', 118)],
+mapa_romenia= {'Arad': [('Zerind', 75), ('Sibiu', 140), ('Timisoara', 118)],
     'Zerind': [('Arad', 75), ('Oradea', 71)],
     'Oradea': [('Zerind', 71), ('Sibiu', 151)],
     'Sibiu': [('Arad', 140), ('Oradea', 151), ('Fagaras', 99), ('Rimnicu Vilcea', 80)],
@@ -25,8 +22,7 @@ mapa_romenia = {
     'Eforie': [('Hirsova', 86)],
     'Vaslui': [('Urziceni', 142), ('Iasi', 92)],
     'Iasi': [('Vaslui', 92), ('Neamt', 87)],
-    'Neamt': [('Iasi', 87)]
-}
+    'Neamt': [('Iasi', 87)]}
 
 def dijkstra(grafo, inicio, destino):
     # Fila de prioridade guarda tuplas: (custo_total, cidade_atual, caminho_ate_aqui)
