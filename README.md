@@ -59,3 +59,7 @@ print(f"--- ROTA OTIMIZADA PARA BUCARESTE ---")
 print(f"Partindo de: {cidade_partida}")
 print(f"Caminho a seguir: {' -> '.join(rota)}")
 print(f"Distância total: {custo_total} km")
+
+# IMAGEM DE CAMINHO DE BUCHAREST
+#<img width="1536" height="1024" alt="Copilot_20260614_191838" src="https://github.com/user-attachments/assets/0c3db641-a195-460f-a607-db562278c87b" />
+
