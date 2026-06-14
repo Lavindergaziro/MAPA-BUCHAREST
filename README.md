@@ -77,6 +77,69 @@ mapa_romenia = {
     'Iasi': [('Vaslui', 92), ('Neamt', 87)],
     'Neamt': [('Iasi', 87)]
 }
+#🧠 **Explicação do Código – Algoritmo de Dijkstra aplicado ao mapa da Romênia**
+
+Este código implementa o **algoritmo de Dijkstra**, um dos métodos mais conhecidos para encontrar o **caminho mais curto** entre dois pontos em um grafo.  
+No contexto deste projeto, o grafo representa o **mapa da Romênia**, onde cada cidade é um **nó** e cada estrada entre cidades é uma **aresta** com um **peso** (a distância em quilômetros).
+
+---
+
+### 🗺️ **1. Modelagem do grafo**
+O dicionário `mapa_romenia` define as conexões entre as cidades:
+```python
+'Arad': [('Zerind', 75), ('Sibiu', 140), ('Timisoara', 118)]
+```
+Cada chave é uma cidade, e o valor é uma lista de tuplas com as cidades vizinhas e suas respectivas distâncias.
+
+---
+
+### ⚙️ **2. Função `dijkstra()`**
+A função recebe:
+- `grafo`: o mapa da Romênia;  
+- `inicio`: cidade de partida;  
+- `destino`: cidade final.
+
+Ela usa uma **fila de prioridade** (`heapq`) para sempre escolher o próximo nó com o **menor custo acumulado**.
+
+**Etapas principais:**
+1. Inicializa a fila com a cidade de partida e custo zero.  
+2. Remove da fila a cidade com menor custo.  
+3. Marca a cidade como visitada.  
+4. Para cada vizinho, calcula o novo custo e adiciona à fila se ainda não foi visitado.  
+5. Quando o destino é alcançado, retorna o custo total e o caminho percorrido.
+
+---
+
+### 🧭 **3. Execução**
+```python
+cidade_partida = 'Arad'
+destino_final = 'Bucharest'
+```
+O algoritmo é executado e imprime:
+```
+--- ROTA OTIMIZADA PARA BUCARESTE ---
+Partindo de: Arad
+Caminho a seguir: Arad -> Sibiu -> Rimnicu Vilcea -> Pitesti -> Bucharest
+Distância total: 418 km
+```
+
+---
+
+### 📊 **4. Resultado**
+O Dijkstra garante o **menor caminho possível** entre Arad e Bucareste, considerando todas as distâncias do grafo.  
+Ele é amplamente usado em sistemas de **navegação, redes de transporte e roteamento de dados**.
+
+---
+
+💡 **Resumo conceitual:**
+| Conceito | Explicação |
+|-----------|------------|
+| **Nó** | Cidade |
+| **Aresta** | Estrada entre cidades |
+| **Peso** | Distância em km |
+| **Fila de prioridade** | Escolhe o menor custo acumulado |
+| **Resultado** | Caminho mais curto até o destino |
+
 
 # Heurística h(n): Distância em linha reta de cada cidade até BUCUBARESTE (Bucharest)
 heuristica_bucareste = {
