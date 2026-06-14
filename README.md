@@ -144,3 +144,52 @@ print(f"Distância total: {custo_total} km")
 # IMAGEM DE CAMINHO DE BUCHAREST
 #<img width="1536" height="1024" alt="Copilot_20260614_191838" src="https://github.com/user-attachments/assets/0c3db641-a195-460f-a607-db562278c87b" />
 
+# IMAGEM 2
+#<img width="1536" height="1024" alt="Copilot_20260614_192848" src="https://github.com/user-attachments/assets/7384e916-d0d7-4604-ae82-d796ce72e2b4" />
+
+#🧠 **Explicação do funcionamento da Busca Gulosa.  
+
+A **Busca Gulosa** é um algoritmo de busca heurística que tenta encontrar o caminho até o objetivo **escolhendo sempre o nó que parece mais promissor**, com base apenas na **heurística** — ou seja, uma estimativa da distância até o destino.  
+
+---
+
+### ⚙️ **Como ela funciona passo a passo**
+1. **Início:**  
+   O algoritmo começa na cidade inicial (por exemplo, *Arad*).  
+
+2. **Heurística:**  
+   Cada cidade tem um valor `h(n)` — a distância em linha reta até *Bucareste*. Esse valor indica o “quão perto” o nó parece estar do objetivo.  
+
+3. **Expansão:**  
+   A cada passo, o algoritmo escolhe **a cidade com o menor valor de heurística** entre as disponíveis.  
+   Ele **não considera o custo real do caminho percorrido**, apenas o valor estimado até o destino.  
+
+4. **Exploração:**  
+   A cidade escolhida é expandida — ou seja, o algoritmo analisa suas vizinhas e adiciona essas cidades à fronteira (lista de possíveis próximos passos).  
+
+5. **Critério de parada:**  
+   Quando o algoritmo chega à cidade objetivo (*Bucharest*), ele encerra e retorna o caminho percorrido.  
+
+---
+
+### 📉 **Características principais**
+| Aspecto | Descrição |
+|----------|------------|
+| **Base de decisão** | Apenas na heurística `h(n)` |
+| **Vantagem** | Rápido e simples — ótimo para buscas aproximadas |
+| **Desvantagem** | Pode escolher caminhos ruins, pois ignora o custo real (`g(n)`) |
+| **Tipo de busca** | Informada (usa conhecimento adicional sobre o problema) |
+
+---
+
+### 🧭 **Exemplo prático**
+No caso do mapa da Romênia:  
+- Começando em **Arad (h=366)**, o algoritmo compara as cidades vizinhas: *Zerind (374)*, *Sibiu (253)* e *Timisoara (329)*.  
+- Escolhe **Sibiu**, pois tem o menor valor de heurística.  
+- Depois, de *Sibiu*, escolhe *Fagaras (176)*, e assim por diante, até chegar em *Bucharest (0)*.
+
+---
+
+Em resumo, a **Busca Gulosa** é como um viajante que sempre escolhe o caminho que *parece* mais curto olhando o mapa — mas nem sempre é o mais eficiente.  
+
+
