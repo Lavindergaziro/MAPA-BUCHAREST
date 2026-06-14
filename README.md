@@ -192,4 +192,29 @@ No caso do mapa da Romênia:
 
 Em resumo, a **Busca Gulosa** é como um viajante que sempre escolhe o caminho que *parece* mais curto olhando o mapa — mas nem sempre é o mais eficiente.  
 
+# EXECUÇÃO DO ALGORITMO DIJKSTRA.
+<img width="1536" height="1024" alt="Copilot_20260614_193625" src="https://github.com/user-attachments/assets/175811e7-5a43-4e94-84f6-368297b09be2" />
+
+# 🧩 **Explicação para acompanhar a imagem da execução do código Dijkstra**
+
+A imagem representa o resultado da execução do algoritmo **Dijkstra**, aplicado ao mapa da Romênia.  
+Esse algoritmo é usado para encontrar o **caminho mais curto** entre duas cidades — neste caso, de **Arad** até **Bucareste**.
+
+---
+
+### ⚙️ **Como o Dijkstra funciona**
+1. **Início:** O algoritmo parte da cidade inicial (*Arad*) e define o custo inicial como zero.  
+2. **Exploração:** Ele analisa todas as cidades vizinhas e calcula o custo total para chegar a cada uma.  
+3. **Escolha do menor custo:** A cada etapa, o algoritmo escolhe a cidade com o **menor custo acumulado** e continua o processo a partir dela.  
+4. **Atualização dos custos:** Se encontrar um caminho mais curto para uma cidade já visitada, ele atualiza o custo.  
+5. **Finalização:** Quando chega ao destino (*Bucareste*), o algoritmo retorna o **caminho otimizado** e a **distância total** percorrida.
+
+---
+
+### 🧭 **Resultado mostrado na imagem**
+- **Partida:** Arad  
+- **Caminho encontrado:** Arad → Sibiu → Rimnicu Vilcea → Pitesti → Bucharest  
+- **Distância total:** 418 km  
+
+Esse é o **trajeto mais eficiente** segundo o cálculo das distâncias entre as cidades, demonstrando o poder do Dijkstra em resolver problemas de rotas e otimização de caminhos.  
 
