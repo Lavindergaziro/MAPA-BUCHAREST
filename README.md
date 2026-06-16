@@ -5,11 +5,6 @@ MODELO DO MAPA DA ROMENIA EM PYTHON.
 
 
 
-def dijkstra(grafo, inicio, destino):
-    # Fila de prioridade guarda tuplas: (custo_total, cidade_atual, caminho_ate_aqui)
-    fila_prioridade = [(0, inicio, [inicio])]
-    visitados = set()
-
     while fila_prioridade:
         (custo, cidade_atual, caminho) = heapq.heappop(fila_prioridade)
 
